@@ -37,4 +37,21 @@ if (
         symbols, -s ~ Add optional symbols to password
         `
     );
-}
+} 
+
+// Workings //
+
+else if (arguments.includes("-l")) {
+    const lengthWidth =
+      arguments.indexOf("--l") !== -1
+  
+    const lengthArg = arguments[lengthWidth + 1];
+    const parsedLength = parseInt(lengthArg, 10);
+  
+    if (!isNaN(parsedLength) && parsedLength > 0) {
+      lengthValue = parsedLength;
+    } else {
+      console.log("ERROR: Invalid Length input. Default value will be used.");
+      process.exit(1);
+    }
+  }
