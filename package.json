@@ -11,7 +11,7 @@
     "url": "https://github.com/dderible/FSJS-QAP1/tree/main"
   },
   "bin": {
-    "text-generate": "./index.js"
+    "pass-generate": "./index.js"
   },
   "author": "Declan Derible",
   "license": "ISC"

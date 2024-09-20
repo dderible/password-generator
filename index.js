@@ -69,3 +69,20 @@ else if (arguments.includes("-l")) {
   if (arguments.includes("-s")) {
     lowerCaseLetters += symbols;
   }
+
+  // Printing the Password //
+
+  console.log(`Selected Password Length: ${passwordLength}`);
+
+  let password = "";
+  for (let i = 0; i < passwordLength; i++) {
+    const randomIndex = Math.floor(Math.random() * lowerCaseLetters.length);
+    password += lowerCaseLetters[randomIndex];
+  }
+
+  console.log(
+    `Thank you for selecting Declan's Password Generator!
+    Here is your requested randomly generated password:
+    ${password}
+    We look forward to your use of our services again!
+    `);
